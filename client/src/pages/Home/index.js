@@ -58,6 +58,6 @@ export default function Home() {
     <Subtitle>Ease your job search and find ideal candidates with our all in one, AI insight analysis model.</Subtitle>
     <Explore href="/upload">EXPLORE JOBS</Explore>
     <Magnify src={MAG} />
-    <WaveFooter/>
+    <WaveFooter />
   </Container>
 };

@@ -132,6 +132,6 @@ export default function UploadResume() {
       
       Only supports .pdf
     </UploadBox>
-    <WaveFooter/>
+    <WaveFooter />
   </Container>
 }

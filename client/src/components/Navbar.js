@@ -1,6 +1,15 @@
 import { styled } from 'styled-components'
 import MAN from '../assets/circleman.png'
 import LOGO from '../assets/insighthire.png'
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { ClerkProvider } from '@clerk/clerk-react'
+
+// Import your publishable key
+const PUBLISHABLE_KEY = "pk_test_dmFsdWVkLWdvc2hhd2stMTkuY2xlcmsuYWNjb3VudHMuZGV2JA"
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const Container = styled.div`
   display: flex;
@@ -24,6 +33,7 @@ const Left = styled.div`
 
 const Logo = styled.img`
   height: 50px;
+  border-radius: 50%;
 `
 
 const Right = styled.div`
@@ -32,6 +42,7 @@ const Right = styled.div`
   flex: 1;
   height: 100%;
   align-items: center;
+  font-weight: bold;
 `
 
 const Login = styled.button`
@@ -57,7 +68,14 @@ export default function Navbar() {
     <a href="/">Home</a>
     <a href="/">About Us</a>
     <a href="/">Services</a>
-    <a href="/upload" style={{margin: 0}}><Login>LOGIN</Login></a>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} signInForceRedirectUrl="/upload" afterSignOutUrl="/upload">
+      <SignedOut>
+        <SignInButton><Login>LOGIN</Login></SignInButton>
+      </SignedOut>
+      <SignedIn>
+        <UserButton><Login>SIGN OUT</Login></UserButton>
+      </SignedIn>
+    </ClerkProvider>
   </Right>
 
   var dashboard = <Right>
@@ -68,7 +86,7 @@ export default function Navbar() {
     <a href="/" style={{display: 'flex', flexDirection: 'row', alignItems: 'center', margin: 0}}>
       <PFP src={MAN}></PFP>
       <div style={{marginLeft: '15px', fontWeight: 'bold'}}>
-        Alex Johnson
+        Yasir White
       </div>
     </a>
     

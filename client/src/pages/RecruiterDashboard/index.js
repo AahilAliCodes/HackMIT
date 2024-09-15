@@ -1,5 +1,5 @@
 function Recruiter() {
-  return <></>
+  return <button>Reject All Other Applicants</button>
 }
 
 export default Recruiter;

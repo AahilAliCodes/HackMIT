@@ -4,7 +4,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import { styled } from 'styled-components';
 import MAP from '../../assets/map.png'
 import EXPLORE from '../../assets/explorejobs.png'
-import WaveFooter from '../../components/Wave';
 
 const MainContainer = styled.div`
   display: flex;
@@ -412,7 +411,6 @@ function UserDashboard() {
     <img src={EXPLORE}/>
     <span style={{color: '#3DA8C9', fontSize: '32px', fontWeight: 'bold', margin:'10px 0px'}}>Explore Jobs</span><br/>
     Select a job on the right panel
-    <WaveFooter/>
   </Left>
 
 const rightYesJob = jobSelected !== false ? (
