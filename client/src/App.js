@@ -1,4 +1,4 @@
-import { Home, NotFound, UserDashboard, Recruiter, UploadResume } from "./pages";
+import { Home, NotFound, UserDashboard, Recruiter, UploadResume, Login } from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
