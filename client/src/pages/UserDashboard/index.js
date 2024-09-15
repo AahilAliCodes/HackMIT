@@ -4,6 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { styled } from 'styled-components';
 import MAP from '../../assets/map.png'
 import EXPLORE from '../../assets/explorejobs.png'
+import STAR from '../../assets/Vector.png'
 
 const MainContainer = styled.div`
   display: flex;
@@ -77,6 +78,38 @@ const Card = styled.div`
   font-size: 16px;
 `;
 
+const GetInsights = styled.button`
+  all: unset;
+  background-color: #3DA8C9;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 20px;
+  width: max-content;
+  color: white;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+`
+
+const Apply = styled.button`
+  all: unset;
+  border: 1px solid #3DA8C9;
+  color: #3DA8C9;
+  background-color: white;
+  border-radius: 20px;
+  padding: 12px 20px;
+  margin-right: 20px;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+`
+
 const CardTitle = styled.h2`
   font-size: 18px;
   font-weight: bold;
@@ -112,6 +145,7 @@ const InsightItem = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  background-color: #9be7d455;
   ${props => props.highlighted && `
     background-color: #e0f2fe;
     border-radius: 0.25rem;
@@ -119,7 +153,7 @@ const InsightItem = styled.div`
 `;
 
 const ViewButton = styled.button`
-  background-color: #3b82f6;
+  background-color: #3DA8C9;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
@@ -385,27 +419,33 @@ function UserDashboard() {
   <Card>
     <CardTitle>PROFILE SUMMARY</CardTitle>
     <CardContent>
-      Alex Johnson is a highly qualified candidate for the Senior Software Engineer position. With 5 years of experience, a Bachelor's degree, and proficiency in Python, Java, Ruby, and SQL, Alex's profile is well-aligned with the job requirements. Alex's high GPA in the Bachelor's degree program has a positive impact on the overall score, demonstrating a commitment to excellence and attention to detail.
+      Yasir White is a promising candidate with diverse technical expertise and a solid academic background, aiming to complete an Associate's degree in Computer Science and Engineering by May 2025, with a commendable GPA of 3.82. He brings hands-on experience in software development, especially artificial intelligence, having optimized PyTorch neural network models and excelled in roles such as AI Research Intern at Lehigh University. Additionally, he has advanced skills in Python, Golang, and React, backed by practical experience creating RESTful APIs and full-stack applications. His GitHub score of 5.9 further highlights his proficiency and dedication to collaborative development, making him a standout candidate for Convex.
     </CardContent>
   </Card>
   <Card>
     <CardTitle>YOUR STRONGEST ATTRIBUTE</CardTitle>
     <CardContent>
-      Alex's GPA of 4.0 is a standout attribute that aligns with FutureTech Solutions' preference for perfectionism. While Alex's experience is valuable, the high GPA compensates for any lack of experience, significantly enhancing the overall score.
+      Mentored the 2024 USAD National Champions to victory, Guided students to become strong competitors and individuals, Developed a demo for untrained caretakers at HackHarvard, Contributed to the creation of YayaGuide for Dementia/Alzheimer's support
     </CardContent>
   </Card>
   <Card>
     <CardTitle>INSIGHTS</CardTitle>
     <InsightItem highlight>
-      <span>Create more Github content</span>
+    <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+        <img src={STAR}/>
+        <span>Create more Github content</span>
+      </div>
       <ViewButton>View</ViewButton>
     </InsightItem>
     <InsightItem highlighted>
-      <span>Add more skills</span>
+      <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+        <img src={STAR}/>
+        <span>Add more skills</span>
+      </div>
       <ViewButton>View</ViewButton>
     </InsightItem>
   </Card>
-</Left>
+  </Left>
 
   const leftNoJob = <Left style={{alignItems: 'center', textAlign: 'center', fontFamily: 'Bricolage Grotesque'}}>
     <img src={EXPLORE}/>
@@ -413,7 +453,7 @@ function UserDashboard() {
     Select a job on the right panel
   </Left>
 
-const rightYesJob = jobSelected !== false ? (
+  const rightYesJob = jobSelected !== false ? (
   <Right>
     {JOB_DATA.filter(job => job.uniqueID === jobSelected).map(job => (
       <React.Fragment key={job.uniqueID}>
@@ -422,7 +462,10 @@ const rightYesJob = jobSelected !== false ? (
           <CardContent>
             {job.JobDescription}
           </CardContent>
-          <button onClick={() => {getInsights(true)}}>Get Insights</button>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
+            <Apply>APPLY</Apply>
+            <GetInsights onClick={() => {getInsights(true)}}><img src={STAR}/>INSIGHTS</GetInsights>
+          </div>
         </Card>
         <div style={{marginTop: '50px'}}></div>
         <CardTitle>Job Details</CardTitle>

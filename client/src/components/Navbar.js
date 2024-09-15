@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import MAN from '../assets/circleman.png'
+import MAN from '../assets/yasir.jpg'
 import LOGO from '../assets/insighthire.png'
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { ClerkProvider } from '@clerk/clerk-react'
@@ -42,7 +42,6 @@ const Right = styled.div`
   flex: 1;
   height: 100%;
   align-items: center;
-  font-weight: bold;
 `
 
 const Login = styled.button`
@@ -84,7 +83,7 @@ export default function Navbar() {
     <a href="/">Reports</a>
     <a href="/">Feedback</a>
     <a href="/" style={{display: 'flex', flexDirection: 'row', alignItems: 'center', margin: 0}}>
-      <PFP src={MAN}></PFP>
+      <PFP style={{borderRadius: '50%'}} src={MAN}></PFP>
       <div style={{marginLeft: '15px', fontWeight: 'bold'}}>
         Yasir White
       </div>
