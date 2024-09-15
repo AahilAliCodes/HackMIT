@@ -1,6 +1,7 @@
 import {styled} from 'styled-components'
 import MAP from '../../assets/map.png'
 import { useState, useRef } from 'react'
+import WaveFooter from '../../components/Wave'
 
 const Container = styled.div`
   display: flex;
@@ -131,5 +132,6 @@ export default function UploadResume() {
       
       Only supports .pdf
     </UploadBox>
+    <WaveFooter/>
   </Container>
 }

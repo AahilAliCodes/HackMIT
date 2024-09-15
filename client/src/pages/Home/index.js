@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 import MAP from '../../assets/map.png'
 import TITLE from '../../assets/title.png'
 import MAG from '../../assets/magnifying.png'
+import WaveFooter from '../../components/Wave'
 
 const Container = styled.div`
   width: calc(100% - 300px);
@@ -57,5 +58,6 @@ export default function Home() {
     <Subtitle>Ease your job search and find ideal candidates with our all in one, AI insight analysis model.</Subtitle>
     <Explore href="/upload">EXPLORE JOBS</Explore>
     <Magnify src={MAG} />
+    <WaveFooter/>
   </Container>
 };
