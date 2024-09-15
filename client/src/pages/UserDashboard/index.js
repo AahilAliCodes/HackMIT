@@ -185,19 +185,117 @@ const JobViewButton = styled.button`
   }
 `
 
-const JOB_DATA = {
-  "1234": {
-    "Company": "FutureTech Solutions is a leading technology company that specializes in developing innovative software solutions. The company is headquartered in San Francisco, California, and has a strong focus on excellence and perfectionism. FutureTech Solutions offers a dynamic work environment and is committed to fostering talent and creativity.",
-    "Title": "Senior Software Engineer",
-    "Description": "This is a job. Take it or leave it."
+const JOB_DATA = [
+  {
+    "uniqueID": "1234",
+    "CompanyName": "Convex",
+    "JobTitle": "Software Engineer",
+    "JobDescription": "Convex is transforming the way developers build applications. Our mission is to fundamentally change how software is built on the Internet by empowering developers to create fast, reliable, and dynamic apps without the headaches of complex backend engineering or the hassles of database administration. We provide a cutting-edge, full-stack developer platform that seamlessly combines a powerful custom database with an integrated execution environment.",
+    "ImgLink": "https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/328383/convex-logo-2048.png",
+    "Location": "San Francisco, California",
+    "Company Size": "10-50",
+    "Type": "Full-time",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelors, Masters, or PhD in Computer Science (or related technical field) with a minimum of 2+ years of relevant experience with backend, systems, product, or full-stack engineering"
+  },
+  {
+    "uniqueID": "5678",
+    "CompanyName": "Fetch.AI",
+    "JobTitle": "Software Engineer Intern",
+    "JobDescription": "Fetch.ai is building an open access, tokenized, decentralized machine learning network to enable smart infrastructure built around a decentralized digital economy. Join us to work on fascinating and promising new technology together with top class software engineers and researchers spanning across multiple fields (multi agent systems, artificial intelligence, machine learning, economics, cryptography and more!). You will collaborate with top academics and corporate partners across the world to further develop our solutions and deploy them in real life scenarios.",
+    "ImgLink": "https://cdn.theorg.com/c5c60037-94a4-4a96-b1d2-a7ca88e11503_medium.jpg",
+    "Location": "Cambridge, UK",
+    "Company Size": "50-100",
+    "Type": "Internship",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelor's degree in Computer Science, Engineering, or a related field (or equivalent experience). 3-4 years of experience as a Frontend Developer or similar role. Proficiency in HTML, CSS, and JavaScript. Strong experience with React & Next JS framework. Knowledge of React and common tools used in the wider React ecosystem, such as Node.js, NPM, Babel, Webpack, Frontend Libraries, Tailwind, and Material UI. Knowledge of UI/UX principles and best practices. Understanding of version control systems (Git, SVN, etc.). Strong problem-solving skills and attention to detail. Excellent communication and teamwork skills."
+  },
+  {
+    "uniqueID": "9101",
+    "CompanyName": "Tune.hq",
+    "JobTitle": "Machine Learning Engineer",
+    "JobDescription": "At Tune AI, we're building the generative AI stack for enterprises and developers powered by open source models. Our vision is to become the AI infrastructure of the internet, and those who power the world. We're backed by Accel, Flipkart, Together Fund, Speciale Invest, Techstars, and other top-tier VCs. As part of our work life, we work in office 5 days of the week from 11am to 7pm. We also have frequent team outings to bring everyone a little closer. Our pantry remains stocked up with your favourite snacks and we have an automated coffee machine that makes you brilliant cappuccinos as well as espresso shots when you need the jolt. Our office has dedicated in-house staff that can whip up food instantly for you so you can focus on what you do best. The best part? The beach is 500 meters away from our office so meetings at dusk can happen with sand between your toes.",
+    "ImgLink": "https://framerusercontent.com/images/P3ibw3xcMF3puvmNOGPVnc7wL18.png",
+    "Location": "Chennai, india",
+    "Company Size": "10-50",
+    "Type": "Full-Time",
+    "Salary": "125,000 - 175,000",
+    "RequiredExpereince": "4-6 years of experience in machine learning, data science, or MLOps Strong understanding of large-language models and Retrieval Augmented Generation (RAG) Proficient in Python, FastAPI, SQLAlchemy, Docker, PyTorch, Transformers, and GitHub Good to have: Go, Kubernetes, Cloud (GCP, AWS, Azure) Fluent with Linux"
+  },
+  {
+    "uniqueID": "1121",
+    "CompanyName": "Citadel",
+    "JobTitle": "Software Engineer 2025 University Graduate (US)",
+    "JobDescription": "At Citadel, our engineers work in small teams to turn the best ideas into high-performing and resilient technology. With short development cycles, work rapidly goes into production. As an engineer, you can create systems architectures, develop platforms and build web frameworks. You’ll have access to state-of-the-art tools and apply innovative techniques including distributed computing, natural language processing, machine learning and more.",
+    "ImgLink": "https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg",
+    "Location": "New York, Miami",
+    "Company Size": "1000-5000",
+    "Type": "Full-Time",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelor's degree in Computer Science, Engineering, or a related field (or equivalent experience). 3-4 years of experience as a Frontend Developer or similar role. Proficiency in HTML, CSS, and JavaScript. Strong experience with React & Next JS framework. Knowledge of React and common tools used in the wider React ecosystem, such as Node.js, NPM, Babel, Webpack, Frontend Libraries, Tailwind, and Material UI. Knowledge of UI/UX principles and best practices. Understanding of version control systems (Git, SVN, etc.). Strong problem-solving skills and attention to detail. Excellent communication and teamwork skills."
+  },
+  {
+    "uniqueID": "3141",
+    "CompanyName": "Jane Street",
+    "JobTitle": "Software Engineer Internship, May-August",
+    "JobDescription": "Our goal is to give you a real sense of what it’s like to work at Jane Street full time. Over the course of your internship, you will explore ways to approach and solve exciting problems within your field of interest through fun and challenging classes, interactive sessions, and group discussions — and then you will have the chance to put those lessons to practical use. As an intern, you are paired with full-time employees who act as mentors, collaborating with you on real-world projects we actually need done. When you’re not working on your project, you will have plenty of time to use our office amenities, physical and virtual educational resources, attend guest speakers and social events, and engage with the parts of our work that excite you the most. If you’ve never thought about a career in finance, you’re in good company. Many of us were in the same position before working here. If you have a curious mind, a collaborative spirit, and a passion for solving interesting problems, we have a feeling you’ll fit right in.",
+    "ImgLink": "https://www.careers.cam.ac.uk/sites/www.careers.cam.ac.uk/files/media/jane_street_square.png",
+    "Location": "New York, NY",
+    "Company Size": "500-1000",
+    "Type": "Internship",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelor's degree in Computer Science, Engineering, or a related field (or equivalent experience). 3-4 years of experience as a Frontend Developer or similar role. Proficiency in HTML, CSS, and JavaScript. Strong experience with React & Next JS framework. Knowledge of React and common tools used in the wider React ecosystem, such as Node.js, NPM, Babel, Webpack, Frontend Libraries, Tailwind, and Material UI. Knowledge of UI/UX principles and best practices. Understanding of version control systems (Git, SVN, etc.). Strong problem-solving skills and attention to detail. Excellent communication and teamwork skills."
+  },
+  {
+    "uniqueID": "3221",
+    "CompanyName": "Hudson River Trading",
+    "JobTitle": "Software Engineering Internship Summer 2025",
+    "JobDescription": "HRT is seeking highly motivated full-time students for our software engineering summer internship program. We are looking for smart programmers who love to code, love to learn, and who can thrive in an entrepreneurial environment. At HRT, our engineers create and maintain critical technology and infrastructure that is integral to the success of our trading.",
+    "ImgLink": "https://s3-us-west-1.amazonaws.com/upload.comparably.com/130368/companies/130368/logo_1665498580795.jpg",
+    "Location": "New York, NY",
+    "Company Size": "500-1000",
+    "Type": "Internship",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelor's degree in Computer Science, Engineering, or a related field (or equivalent experience). 3-4 years of experience as a Frontend Developer or similar role. Proficiency in HTML, CSS, and JavaScript. Strong experience with React & Next JS framework. Knowledge of React and common tools used in the wider React ecosystem, such as Node.js, NPM, Babel, Webpack, Frontend Libraries, Tailwind, and Material UI. Knowledge of UI/UX principles and best practices. Understanding of version control systems (Git, SVN, etc.). Strong problem-solving skills and attention to detail. Excellent communication and teamwork skills."
+  },
+  {
+    "uniqueID": "4521",
+    "CompanyName": "Modal",
+    "JobTitle": "Software Engineer - Product (Frontend)",
+    "JobDescription": "At Modal, we build foundational technology, including an optimized container runtime, a GPU-aware scheduler, and a distributed file system. We're a small team based out of New York and Stockholm and have raised over $23M. Our team includes creators of popular open-source projects (e.g., Seaborn, Luigi), academic researchers, international olympiad medalists, and experienced engineering.",
+    "ImgLink": "https://i.pinimg.com/736x/73/db/87/73db87bedbdaf64f2f820c3ad5430d58.jpg",
+    "Location": "San Fransisco, CA",
+    "Company Size": "10-50",
+    "Type": "Full-Time",
+    "Salary": "160,000 - 225,000",
+    "RequiredExpereince": "Bachelor's degree in Computer Science, Engineering, or a related field (or equivalent experience). 3-4 years of experience as a Frontend Developer or similar role. Proficiency in HTML, CSS, and JavaScript. Strong experience with React & Next JS framework. Knowledge of React and common tools used in the wider React ecosystem, such as Node.js, NPM, Babel, Webpack, Frontend Libraries, Tailwind, and Material UI. Knowledge of UI/UX principles and best practices. Understanding of version control systems (Git, SVN, etc.). Strong problem-solving skills and attention to detail. Excellent communication and teamwork skills."
   }
-}
+];
 
 function UserDashboard() {
   const initial = 1;
   const [percentage, setPercentage] = useState(initial);
-  const [jobSelected, setJob] = useState(false)
-  const [insights, getInsights] = useState(false)
+  const [jobSelected, setJob] = useState(false);
+  const [insights, getInsights] = useState(false);
+
+
+  function NewJobCard(job) {
+    return <JobCard key={job.uniqueID}>
+      <img src={job.ImgLink}/>
+      <JobTextContainer>{job.JobTitle}<br/><span>{job.CompanyName}</span></JobTextContainer>
+      <JobViewButton onClick={() => {selectJob(job.uniqueID)}}>View</JobViewButton>
+    </JobCard>
+  }
+
+  function GetJobs() {
+    const jobs = [];
+    
+    for (let i = 0; i < JOB_DATA.length; i++) {
+      jobs.push(NewJobCard(JOB_DATA[i]));
+    }
+  
+    return jobs;
+  }
 
   function selectJob(job) {
     getInsights(false);
@@ -219,6 +317,7 @@ function UserDashboard() {
       ))}
     </AttributeBar>
   );
+
 
   const leftYesJob = <Left>
   <StatsContainer>
@@ -316,99 +415,54 @@ function UserDashboard() {
     <WaveFooter/>
   </Left>
 
-  const rightYesJob = <Right>
+const rightYesJob = jobSelected !== false ? (
+  <Right>
+    {JOB_DATA.filter(job => job.uniqueID === jobSelected).map(job => (
+      <React.Fragment key={job.uniqueID}>
+        <Card>
+          <CardTitle>{job.CompanyName}</CardTitle>
+          <CardContent>
+            {job.JobDescription}
+          </CardContent>
+          <button onClick={() => {getInsights(true)}}>Get Insights</button>
+        </Card>
+        <div style={{marginTop: '50px'}}></div>
+        <CardTitle>Job Details</CardTitle>
+        <CardContent style={{fontSize: '14px'}}>
+          <Divider/>
+          <div>Location: <Detail>{job.Location}</Detail></div>
+          <Divider/>
+          <div>Company Size: <Detail>{job["Company Size"]}</Detail></div>
+          <Divider/>
+          <div>Type: <Detail>{job.Type}</Detail></div>
+          <Divider/>
+          <div>Salary: <Detail>{job.Salary}</Detail></div>
+          <Divider/>
+          <div>Required Experience: <Detail>{job.RequiredExpereince}</Detail></div>
+          <Divider/>
+        </CardContent>
+      </React.Fragment>
+    ))}
+  </Right>
+) : (
+  <Right>
     <Card>
-      <CardTitle>FutureTech Solutions</CardTitle>
+      <CardTitle>No Job Selected</CardTitle>
       <CardContent>
-        FutureTech Solutions is a leading technology company that specializes in developing innovative software solutions. The company is headquartered in San Francisco, California, and has a strong focus on excellence and perfectionism. FutureTech Solutions offers a dynamic work environment and is committed to fostering talent and creativity.
+        Please select a job to view details.
       </CardContent>
-      <button onClick={()=>{getInsights(true)}}>Get Insights</button>
     </Card>
-    <div style={{marginTop: '50px'}}></div>
-      <CardTitle>Job Details</CardTitle>
-      <CardContent style={{fontSize: '14px'}}>
-        <Divider/>
-        <div>Location:<Detail>San Francisco, California</Detail></div>
-        <Divider/>
-        <div>Company Size: <Detail>Medium (501-1000 Employees)</Detail></div>
-        <Divider/>
-        <div>Type: <Detail>Full-time</Detail></div>
-        <Divider/>
-        <div>Hourly / Salary: <Detail>$121,000 - $178,000 yearly</Detail></div>
-        <Divider/>
-        <div>Required Experience: <Detail>5+ years in Software Engineering</Detail></div>
-        <Divider/>
-      </CardContent>
   </Right>
+);
 
-  const rightNoJob = <Right style={{display: 'flex', flexDirection: 'column', height: 'calc(100% - 80px)'}}>
-    <CardTitle>
-      Listed Jobs
-    </CardTitle>
-    <JobList>
-      <JobCard>
-        <img src={"https://pngimg.com/uploads/microsoft/microsoft_PNG13.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Flutter - Los Angeles, CA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://imgix.datadoghq.com/img/favicons/dd-favicon.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Datadog - Boston, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://static-00.iconduck.com/assets.00/glassdoor-icon-512x512-3olkl9jp.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>TotallyReal - Springfield, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://pngimg.com/uploads/microsoft/microsoft_PNG13.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Flutter - Los Angeles, CA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://imgix.datadoghq.com/img/favicons/dd-favicon.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Datadog - Boston, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://static-00.iconduck.com/assets.00/glassdoor-icon-512x512-3olkl9jp.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>TotallyReal - Springfield, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://pngimg.com/uploads/microsoft/microsoft_PNG13.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Flutter - Los Angeles, CA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://imgix.datadoghq.com/img/favicons/dd-favicon.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Datadog - Boston, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://static-00.iconduck.com/assets.00/glassdoor-icon-512x512-3olkl9jp.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>TotallyReal - Springfield, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://pngimg.com/uploads/microsoft/microsoft_PNG13.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Flutter - Los Angeles, CA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://imgix.datadoghq.com/img/favicons/dd-favicon.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>Datadog - Boston, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-      <JobCard>
-        <img src={"https://static-00.iconduck.com/assets.00/glassdoor-icon-512x512-3olkl9jp.png"}/>
-        <JobTextContainer>Software Engineer<br/><span>TotallyReal - Springfield, MA</span></JobTextContainer>
-        <JobViewButton onClick={() => {selectJob('1234')}}>View</JobViewButton>
-      </JobCard>
-    </JobList>
-  </Right>
-
+const rightNoJob = <Right style={{display: 'flex', flexDirection: 'column', height: 'calc(100% - 80px)'}}>
+<CardTitle>
+  Listed Jobs
+</CardTitle>
+<JobList>
+  {GetJobs()}
+</JobList>
+</Right>
 
   return (
     <MainContainer>
